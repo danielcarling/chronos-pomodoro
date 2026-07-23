@@ -1,14 +1,14 @@
 import { Heading } from './components/Heading';
+import { Title } from './components/Title';
 
 import './styles/global.css';
 import './styles/theme.css';
 
-import { TimerIcon } from 'lucide-react';
-
 export function App() {
    return (
       <>
-         <Heading>
+         <Title />
+         {/* <Heading>
             Olá Mundo!
             <button>
                <TimerIcon />
@@ -19,7 +19,7 @@ export function App() {
             rerum excepturi error amet et vero, eaque tempore similique, quae
             distinctio qui voluptates tempora voluptas ratione repudiandae
             magni, fugiat ipsam nostrum!
-         </p>
+         </p> */}
       </>
    );
 }

@@ -1,0 +1,12 @@
+.title {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 8rem 0 0 0;
+   gap: 0.2rem;
+   color: var(--primary);
+}
+
+.icon {
+}
