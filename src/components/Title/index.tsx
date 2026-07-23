@@ -5,7 +5,7 @@ import {
    SettingsIcon,
    SunIcon,
 } from 'lucide-react';
-import styles from './Title.module.css';
+import styles from './styles.module.css';
 
 export function Title() {
    return (

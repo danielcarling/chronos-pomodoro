@@ -1,4 +1,4 @@
-import styles from './Timer.module.css';
+import styles from './styles.module.css';
 
 export function Timer() {
    return (
