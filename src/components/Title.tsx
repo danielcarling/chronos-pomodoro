@@ -13,18 +13,18 @@ export function Title() {
          <div className={styles.title}>
             <TimerIcon size={60} />
             <h1>Chronos</h1>
-            <div className='nav'>
-               <button>
-                  <HouseIcon size={40} />
+            <div className={styles.nav}>
+               <button className={styles.button}>
+                  <HouseIcon size={30} />
                </button>
-               <button>
-                  <HistoryIcon size={40} />
+               <button className={styles.button}>
+                  <HistoryIcon size={30} />
                </button>
-               <button>
-                  <SettingsIcon size={40} />
+               <button className={styles.button}>
+                  <SettingsIcon size={30} />
                </button>
-               <button>
-                  <SunIcon size={40} />
+               <button className={styles.button}>
+                  <SunIcon size={30} />
                </button>
             </div>
          </div>

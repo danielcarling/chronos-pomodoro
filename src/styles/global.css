@@ -6,6 +6,7 @@
 
 html {
    font-size: 62.5%;
+   height: 100vh;
 }
 
 body {
@@ -22,6 +23,13 @@ body {
       'Helvetica Neue',
       sans-serif;
    font-size: 1.6rem; /* 16px */
-   background: var(--gray-900);
+   background: linear-gradient(
+      170deg,
+      var(--gray-900),
+      var(--gray-800),
+      var(--gray-700),
+      var(--gray-600)
+   );
+   /* background: var(--gray-900); */
    color: var(--text-default);
 }

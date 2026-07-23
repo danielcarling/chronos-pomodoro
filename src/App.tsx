@@ -1,4 +1,4 @@
-import { Heading } from './components/Heading';
+import { Timer } from './components/Timer';
 import { Title } from './components/Title';
 
 import './styles/global.css';
@@ -8,6 +8,7 @@ export function App() {
    return (
       <>
          <Title />
+         <Timer />
          {/* <Heading>
             Olá Mundo!
             <button>
