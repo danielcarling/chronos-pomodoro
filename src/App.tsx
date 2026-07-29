@@ -3,6 +3,8 @@ import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 import { CountDown } from './components/CountDown';
 
+import { CirclePlayIcon } from 'lucide-react';
+
 import './styles/global.css';
 import './styles/theme.css';
 
@@ -12,30 +14,38 @@ export function App() {
          <Container>
             <Logo />
          </Container>
+
          <Container>
             <Menu />
          </Container>
+
          <Container>
             <CountDown />
          </Container>
-         {/* <div className='container'>
-            <div className='content'>
-               <Title />
-               <Timer />
-            </div>
-         </div> */}
-         {/* <Heading>
-            Olá Mundo!
-            <button>
-               <TimerIcon />
-            </button>
-         </Heading>
-         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-            rerum excepturi error amet et vero, eaque tempore similique, quae
-            distinctio qui voluptates tempora voluptas ratione repudiandae
-            magni, fugiat ipsam nostrum!
-         </p> */}
+
+         <Container>
+            <form className='form' action=''>
+               <div className='formRow'>
+                  <label htmlFor='input'>task</label>
+                  <input id='input' type='text' />
+               </div>
+
+               <div className='formRow'>
+                  <p>Lorem ipsum dolor sit amet.</p>
+               </div>
+
+               <div className='formRow'>
+                  <p>Ciclos</p>
+                  <p>0 0 0 0 0</p>
+               </div>
+
+               <div className='formRow'>
+                  <button>
+                     <CirclePlayIcon />
+                  </button>
+               </div>
+            </form>
+         </Container>
       </>
    );
 }
