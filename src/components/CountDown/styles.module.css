@@ -5,7 +5,7 @@
    margin: 2rem 0;
 
    p {
-      font-size: 14rem;
+      font-size: clamp(8rem, 25vw, 16rem);
       font-weight: bold;
    }
 }
