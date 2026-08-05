@@ -7,6 +7,7 @@ import { CirclePlayIcon } from 'lucide-react';
 
 import './styles/global.css';
 import './styles/theme.css';
+import { Input } from './components/Input';
 
 export function App() {
    return (
@@ -26,8 +27,7 @@ export function App() {
          <Container>
             <form className='form' action=''>
                <div className='formRow'>
-                  <label htmlFor='input'>task</label>
-                  <input id='input' type='text' />
+                  <Input id='taskId' type='text' labelText='task' />
                </div>
 
                <div className='formRow'>
