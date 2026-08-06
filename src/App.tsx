@@ -8,6 +8,7 @@ import { CirclePlayIcon } from 'lucide-react';
 import './styles/global.css';
 import './styles/theme.css';
 import { Input } from './components/Input';
+import { Cycles } from './components/Cycles';
 
 export function App() {
    return (
@@ -40,8 +41,7 @@ export function App() {
                </div>
 
                <div className='formRow'>
-                  <p>Ciclos</p>
-                  <p>0 0 0 0 0</p>
+                  <Cycles />
                </div>
 
                <div className='formRow'>
