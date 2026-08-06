@@ -2,15 +2,22 @@ import { Container } from './components/Container';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 import { CountDown } from './components/CountDown';
-
-import { CirclePlayIcon } from 'lucide-react';
+import { Input } from './components/Input';
+import { Cycles } from './components/Cycles';
+import { DefaultButton } from './components/DefaultButton';
 
 import './styles/global.css';
 import './styles/theme.css';
-import { Input } from './components/Input';
-import { Cycles } from './components/Cycles';
+import { useState } from 'react';
 
 export function App() {
+   const [cycleActive, setCycleActive] = useState(false);
+
+   function handleClick() {
+      event?.preventDefault();
+      return cycleActive ? setCycleActive(false) : setCycleActive(true);
+   }
+
    return (
       <>
          <Container>
@@ -45,9 +52,11 @@ export function App() {
                </div>
 
                <div className='formRow'>
-                  <button>
-                     <CirclePlayIcon />
-                  </button>
+                  <DefaultButton
+                     cycleActive={cycleActive}
+                     onClick={handleClick}
+                     formAction={'.'}
+                  />
                </div>
             </form>
          </Container>
