@@ -9,6 +9,7 @@ import { DefaultButton } from './components/DefaultButton';
 import './styles/global.css';
 import './styles/theme.css';
 import { useState } from 'react';
+import { Footer } from './components/Footer';
 
 export function App() {
    const [cycleActive, setCycleActive] = useState(false);
@@ -59,6 +60,9 @@ export function App() {
                   />
                </div>
             </form>
+         </Container>
+         <Container>
+            <Footer />
          </Container>
       </>
    );
