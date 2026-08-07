@@ -14,9 +14,9 @@ import { Footer } from './components/Footer';
 export function App() {
    const [cycleActive, setCycleActive] = useState(false);
 
-   function handleClick() {
-      event?.preventDefault();
-      return cycleActive ? setCycleActive(false) : setCycleActive(true);
+   function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
+      event.preventDefault();
+      setCycleActive(prev => !prev);
    }
 
    return (
