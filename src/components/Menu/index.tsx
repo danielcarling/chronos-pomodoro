@@ -11,21 +11,31 @@ import { useState, useEffect } from 'react';
 type AvaliableThemes = 'dark' | 'light';
 
 export function Menu() {
-   const [theme, setTheme] = useState<AvaliableThemes>('dark');
+   const [theme, setTheme] = useState<AvaliableThemes>(() => {
+      const storageTheme =
+         (localStorage.getItem('theme') as AvaliableThemes) || 'dark';
+      return storageTheme;
+   });
+
+   const nextThemeIcon = {
+      dark: <SunIcon />,
+      light: <MoonIcon />,
+   };
 
    function handleThemeChange(
       event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
    ) {
       event.preventDefault(); // Não segue o link
 
-      setTheme(prevTheme => {
-         const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+      setTheme(currentTheme => {
+         const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
          return nextTheme;
       });
    }
 
    useEffect(() => {
       document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
    }, [theme]);
 
    return (
@@ -62,7 +72,8 @@ export function Menu() {
                title='Mudar Tema'
                onClick={handleThemeChange}
             >
-               {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+               {nextThemeIcon[theme]}
+               {/* {theme === 'dark' ? <SunIcon /> : <MoonIcon />} */}
             </a>
          </nav>
       </>
