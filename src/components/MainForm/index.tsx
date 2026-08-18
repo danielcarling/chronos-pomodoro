@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Cycles } from '../Cycles';
 import { Input } from '../Input';
 import { DefaultButton } from '../DefaultButton';
-import { useTaskContext } from '../../contexts/TaskContext';
+import { useTaskContext } from '../../contexts/TaskContext/useTaskContext';
 
 export function MainForm() {
    const { setState } = useTaskContext();
