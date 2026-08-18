@@ -2,8 +2,11 @@ import { useState } from 'react';
 import { Cycles } from '../Cycles';
 import { Input } from '../Input';
 import { DefaultButton } from '../DefaultButton';
+import { useTaskContext } from '../../contexts/TaskContext';
 
 export function MainForm() {
+   const { setState } = useTaskContext();
+
    const [cycleActive, setCycleActive] = useState(false);
 
    function handleClick(event: React.MouseEvent<HTMLButtonElement>) {
